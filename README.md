@@ -9,10 +9,12 @@ in the ethereum simulator Ganache and testnet Ropsten.
 
 a.Start the Apache HTTP server (Bank Server) and MySql using XAMPP and handle the administration using phpMyAdmin.
 
-b.Approach 1: Ganache-CLI
+b.
+Approach 1: Ganache-CLI
     1. Run the command <b>ganache-cli</b> in cmd prompt.
     2. Remix ide in chrome (Web3 Provider option) [Solidity file].
-  Approach 2 : Ropsten Testnet
+
+Approach 2 : Ropsten Testnet
     1. Start metamask extension.
     2. Remix ide in chrome (Injected Web3 option) [Solidity file]
 
