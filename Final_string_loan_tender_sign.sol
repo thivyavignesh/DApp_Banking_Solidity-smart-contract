@@ -61,11 +61,6 @@ contract Loan is Owned {
         nextId++;
     }
     
-
-    //function getLoanees() view public returns(byte[][]) {
-      //  return LoaneeAccts;
-    //}
-    
     function getLoanee(uint id) view public returns (string, string, string, uint, string, string) {
         return (Borrowers[id].pkey, Borrowers[id].fName, Borrowers[id].lName, Borrowers[id].amt, Borrowers[id].authkey, Borrowers[id].authsign);
     }
@@ -121,10 +116,6 @@ contract Loan is Owned {
         
     
     }
-    
-    //function getTenders() view public returns(string[]) {
-     //   return TendAccts;
-    //}
     
     function getTend(uint id) view public returns (string, string, uint, uint, string, string) {
         return (Organisation[id].tendpkey, Organisation[id].org,  Organisation[id].tender_dur, Organisation[id].tender_amt, Organisation[id].tender_authkey, Organisation[id].tender_authsign);
