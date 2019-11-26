@@ -14,8 +14,8 @@ contract Owned {
 }
 
 contract Loan is Owned {
-    
     uint nextId = 0;
+    
     struct Loanee {
         string pkey;
         string fName;
@@ -92,12 +92,12 @@ contract Loan is Owned {
     );
     
     uint nextTend = 0;
-    
     uint tendid;
     
     function getendid() view public returns (uint) {
         return tendid;
     }
+    
     function setTend(string _address, string _org, uint _amt, uint _dur, string _authkey, string _authsign) public {
         var inst = Organisation[nextTend];
         
@@ -113,8 +113,6 @@ contract Loan is Owned {
         TendInfo(_address, _org, _dur, _amt, _authkey, _authsign);
         tendid = nextTend;
         nextTend++;
-        
-    
     }
     
     function getTend(uint id) view public returns (string, string, uint, uint, string, string) {
@@ -122,7 +120,6 @@ contract Loan is Owned {
     }
     
     function minTender() view public returns (string, string, uint, uint, string, string) {
-         
         if (TendAccts.length == 4) {
             uint j = 0; 
             uint minT = Organisation[0].tender_val;
@@ -137,6 +134,5 @@ contract Loan is Owned {
         else {
         return ("NULL","NULL",0,0,"NULL","NULL");
         }
-    
     }
 }
